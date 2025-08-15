@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useCallback } from 'react';
-import { Sparkles, History } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 import { GeneratorSettings, NicknameHistoryItem } from '@/types/nickname';
 import { generateNickname } from '@/lib/nicknameGenerator';
 import NicknameDisplay from './NicknameDisplay';
@@ -46,7 +46,7 @@ const RandomNicknameGenerator = () => {
         await navigator.clipboard.writeText(textToCopy);
         setCopiedMessage('복사되었습니다!');
         setTimeout(() => setCopiedMessage(''), 2000);
-      } catch (err) {
+      } catch {
         setCopiedMessage('복사 실패');
         setTimeout(() => setCopiedMessage(''), 2000);
       }

@@ -25,9 +25,7 @@ const GeneratorControls: React.FC<GeneratorControlsProps> = ({
     onSettingsChange({ ...settings, language: e.target.value as Language });
   };
 
-  const handleLengthChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    onSettingsChange({ ...settings, targetLength: parseInt(e.target.value) });
-  };
+
 
   const handleJobsToggle = (e: React.ChangeEvent<HTMLInputElement>) => {
     onSettingsChange({ ...settings, includeJobs: e.target.checked });

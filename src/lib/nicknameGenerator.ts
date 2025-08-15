@@ -42,7 +42,7 @@ export const generateNickname = (settings: GeneratorSettings): string => {
       if (remainingLength <= 0) break;
       
       // 가능한 단어들 수집
-      let availableWords: string[] = [];
+      const availableWords: string[] = [];
       
       // 기본 명사 중 길이가 맞는 것들
       const suitableNouns = data.nouns.filter((noun: string) => 
